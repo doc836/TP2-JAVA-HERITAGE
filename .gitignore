@@ -2,11 +2,11 @@
 out/
 *.class
 
-# Artefacts de release
+# Artefacts de release (publiés sur GitHub, pas versionnés)
 *.jar
 *.zip
 docs/
 
-# IntelliJ IDEA
+# IntelliJ IDEA (configuration locale)
 .idea/
 *.iml
