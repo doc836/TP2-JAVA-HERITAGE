@@ -1,0 +1,12 @@
+# Compilation Java
+out/
+*.class
+
+# Artefacts de release
+*.jar
+*.zip
+docs/
+
+# IntelliJ IDEA
+.idea/
+*.iml
