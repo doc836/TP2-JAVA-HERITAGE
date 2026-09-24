@@ -1,11 +1,6 @@
 package tp2;
 
-/**
- * Animal générique, racine de la hiérarchie des animaux.
- *
- * @author Berkay
- * @version 0.1.0
- */
+
 
 public class Animal {
 
@@ -37,5 +32,8 @@ public class Animal {
         return age;
     }
 
-
+    @Override
+    public String toString() {
+        return "Je suis un animal";
+    }
 }
