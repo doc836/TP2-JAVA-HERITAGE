@@ -39,4 +39,14 @@ public class Plante {
     public double getHauteur() {
         return hauteur;
     }
+
+    /**
+     * Redéfinit {@link Object#toString()}.
+     *
+     * @return une description textuelle de la plante
+     */
+    @Override
+    public String toString() {
+        return "Je suis une plante";
+    }
 }
