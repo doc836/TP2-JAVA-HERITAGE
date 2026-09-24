@@ -8,6 +8,12 @@ package tp2;
  */
 public class Plante {
 
+    /** Compteur partagé par tous les animaux, sert à générer les identifiants. */
+    private static int compteur = 0;
+
+    /** Identifiant unique de l'animal, attribué à la création. */
+    private final int identifiant;
+
     private String espece;
 
     private double hauteur;
@@ -21,6 +27,22 @@ public class Plante {
     public Plante(String espece, double hauteur) {
         this.espece = espece;
         this.hauteur = hauteur;
+        this.identifiant = ++compteur; // incrémente le compteur partagé puis l'utilise
+    }
+
+    /** @return l'identifiant unique de l'animal */
+    public int getIdentifiant() {
+        return identifiant;
+    }
+
+    /**
+     * Redéfinit {@link Object#toString()}.
+     *
+     * @return une description textuelle incluant l'identifiant
+     */
+    @Override
+    public String toString() {
+        return "Je suis une plante et mon identifiant est " + identifiant;
     }
 
     /**
@@ -40,13 +62,5 @@ public class Plante {
         return hauteur;
     }
 
-    /**
-     * Redéfinit {@link Object#toString()}.
-     *
-     * @return une description textuelle de la plante
-     */
-    @Override
-    public String toString() {
-        return "Je suis une plante";
-    }
+
 }
